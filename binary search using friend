@@ -1,0 +1,80 @@
+#include<iostream>
+using namespace std;
+class bs
+{
+    int a[10],n,i;
+public:
+    bs(int x)
+    {
+        n=x;
+    }
+    int get();
+    void disp();
+    friend int calc(int,int,bs);
+};
+int bs::get()
+{
+x.a[j] 35
+
+        cout<<"Enter values ";
+        for (i=0;i<n;i++)
+            cin>>a[i];
+        return ((n/2)+1);
+}
+
+void bs::disp()
+{
+
+    for (i=0;i<n;i++)
+            cout<<" "<<a[i];
+}
+int calc(int m,int x,bs obj)
+{
+    int i;
+    if (x<obj.a[m])
+    {
+    for (i=0;i<m;i++)
+
+                if (x==obj.a[i])
+                return (i);
+    }
+    if (x>obj.a[m])
+    {
+        for(i=m;i<obj.n;i++)
+            {
+                if (x==obj.a[i])
+                return (i);
+            }
+    }
+    if (x==obj.a[m])
+        return (m);
+    return (0);
+
+}
+int main()
+{
+    int n,m,x,f;
+
+    cout<<"Enter size of array : ";
+    cin>>n;
+    if(n%2==0)
+    {
+        cout<<"Can't get middle value";
+        return (0);
+    }
+    bs obj(n);
+    m=obj.get();
+    cout<<"Enter item to find ";
+    cin>>x;
+    f=calc(m,x,obj);
+    if (f==0)
+    {
+        cout<<"Item not found";
+        return (0);
+    }
+    else
+    {
+        cout<<x<<" found at index "<<f;
+    }
+    return (0);
+}
