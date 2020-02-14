@@ -57,11 +57,6 @@ int main()
 
     cout<<"Enter size of array : ";
     cin>>n;
-    if(n%2==0)
-    {
-        cout<<"Can't get middle value";
-        return (0);
-    }
     bs obj(n);
     m=obj.get();
     cout<<"Enter item to find ";
